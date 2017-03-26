@@ -13,6 +13,10 @@ use Illuminate\Http\Request;
 |
 */
 
+Route::get('beers/random', 'BeerController@random');
+Route::get('beers/more-than-ten-percent', 'BeerController@moreThanTenPercent');
+Route::resource('beers', 'BeerController', ['only' => ['index', 'show']]);
+
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
