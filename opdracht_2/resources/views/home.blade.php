@@ -13,7 +13,7 @@
                             <a href="{{ route('beers.create') }}" class="btn btn-primary">Biertje aanmaken</a>
                         </div>
                         <div class="col-xs-6">
-                            <form id="edit-form" class="form" role="form" method="GET">
+                            <form id="edit-form" class="form" role="form" method="GET" action="/beers/{{ $beers[0]['id'] }}/edit/">
                                 <div class="form-group">
                                     <label for="exampleSelect1">Biertje aanpassen</label>
                                     <select id="edit-dropdown" class="form-control" id="beer">
